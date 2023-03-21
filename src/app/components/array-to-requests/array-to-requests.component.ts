@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { mergeMap, Observable, switchMap, Subscription, from, concatMap, exhaustMap } from 'rxjs';
+import { Observable, switchMap, Subscription, from } from 'rxjs';
 import { TodosService } from 'src/app/services/todos.service';
 
 @Component({
@@ -27,7 +27,7 @@ export class ArrayToRequestsComponent {
     this.resultArray = [];
     this.subscription$ = from(this.sourceArray)
       .pipe(
-        switchMap(val => this.tasksService.getById(val))
+       // get todos using TodosService
       )
       .subscribe(todo => this.resultArray.push(todo))
   }

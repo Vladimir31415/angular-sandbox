@@ -1,6 +1,4 @@
-import { TodosService } from './../../../services/todos.service';
 import { Component, ViewChildren, EventEmitter } from '@angular/core';
-import { forkJoin, zip, switchMap, from, mergeMap } from 'rxjs';
 import { AsyncTaskComponent } from '../async-task/async-task.component';
 
 
@@ -28,7 +26,7 @@ export class TaskListComponent {
   ngAfterViewInit() {
     this.tasksCompleteness = this.tasksList.map((element: AsyncTaskComponent) => element.complete);    
 
-    // zip(this.tasksCompleteness).subscribe(() => console.log('All tasks are done!'));
+    // write a code to do something (e.g logging ) when all async tasks are completed
   
   }
 }

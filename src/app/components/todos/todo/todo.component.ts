@@ -1,13 +1,11 @@
-import { UsersService } from './../../../services/users.service';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Todo, User } from 'src/app/models/interfaces/main.interface';
+import {  Component, Input } from '@angular/core';
+import { Todo } from 'src/app/models/interfaces/main.interface';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoComponent {
   constructor() {}
