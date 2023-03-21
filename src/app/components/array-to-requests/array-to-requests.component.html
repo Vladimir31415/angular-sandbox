@@ -1,0 +1,15 @@
+<h2>Converting observables</h2>
+
+<button (click)="sourceArray = generateArrayWithNumbers()">Generate an array</button>
+<p>Generated array:
+    <span *ngFor="let val of sourceArray; last as isLast">
+        {{val}}<span *ngIf="!isLast">,</span>
+    </span> 
+</p>
+
+<button [disabled]="!sourceArray.length" (click)="convertToRequest()">Convert to requests</button>
+<div class="result">
+    <textarea cols="30" rows="10" *ngFor="let todo of resultArray">
+        {{todo | json}}
+    </textarea>
+</div>

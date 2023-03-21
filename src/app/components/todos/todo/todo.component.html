@@ -1,0 +1,9 @@
+<div>
+    <!-- ToDo data -->
+    {{ title }}
+    
+    <!-- Time data -->
+    <button (click)="showTime()"> Show Time </button>
+
+    <p> {{ this.time ? 'Time: ' + this.time.toLocaleTimeString() : ''}}</p> 
+</div>

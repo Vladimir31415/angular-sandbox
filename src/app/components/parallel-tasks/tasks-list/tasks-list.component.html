@@ -1,0 +1,10 @@
+<h2>Async tasks</h2>
+<div class="tasks-list">
+    <div class="async-task" *ngFor="let task of tasks" >
+        <app-async-task #asyncTask 
+            [interval]="task.interval"
+            [name]="task.name"
+            (complete)="onTaskComplete($event)"
+        ></app-async-task>   
+    </div>
+</div>
